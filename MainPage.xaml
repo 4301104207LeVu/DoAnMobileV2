@@ -1,17 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DoAnMobile"
-             x:Class="DoAnMobile.MainPage">
-    <ContentPage IconImageSource="clock.png">
-        <StackLayout HorizontalOptions="Center"  VerticalOptions="Center" Padding="5">
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:DoAnMobile"
+            xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
+            windows:TabbedPage.HeaderIconsEnabled="true"
+            x:Class="DoAnMobile.MainPage">
+    <ContentPage BackgroundColor="LightBlue" Title="Clock" Icon="clock.png">
+        <StackLayout BackgroundColor="LightBlue" HorizontalOptions="Center"  VerticalOptions="Center" Padding="5">
             <Frame  CornerRadius="10"  
-                     OutlineColor="Red" 
-                     Padding="0">
+                    OutlineColor="Red" 
+                    Padding="0">
                 <Grid BackgroundColor="gray" >
                     <BoxView BackgroundColor="Black"  />
                     <Grid BackgroundColor="gray" Margin="5">
-                        <Label TextColor="Black" 
+                        <Label TextColor="White" 
                            Text="" x:Name="lbldate" 
                            VerticalOptions="Center" 
                            HorizontalOptions="Center" 
@@ -21,7 +23,7 @@
             </Frame>
         </StackLayout>
     </ContentPage>
-    <ContentPage IconImageSource="stw.png">
+    <ContentPage BackgroundColor="LightBlue" Title="Stop Watch" Icon="stw.png">
         <Grid Padding="5" RowSpacing="5" ColumnSpacing="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
@@ -33,19 +35,19 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" x:Name="TimerTap" Text="00:00:00.000000" FontSize="Large" FontAttributes="Bold" BackgroundColor="Black" TextColor="White"
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" x:Name="TimerTap" Text="00:00:00.000000" FontSize="Large" FontAttributes="Bold" BackgroundColor="Gray" TextColor="White"
                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center" LineBreakMode="NoWrap"/>
-            <Button Grid.Row="1" Grid.Column="0" x:Name="BtnStartTap" HorizontalOptions="FillAndExpand" Clicked="startTap" Text="Start"/>
-            <Button Grid.Row="1" Grid.Column="0" x:Name="BtnResumeTap" HorizontalOptions="FillAndExpand" IsVisible="false"  Clicked="ResumeTap" Text="Resume"/>
-            <Button Grid.Row="1" Grid.Column="0" x:Name="BtnPauseTap" HorizontalOptions="FillAndExpand" IsVisible="false"  Clicked="pauseTap" Text="Pause"/>
-            <Button Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" WidthRequest="50" Clicked="TapTime" Text="Tap"/>
-            <Button Grid.Row="1" Grid.Column="2" HorizontalOptions="FillAndExpand" WidthRequest="50" Clicked="ResetTime" Text="Reset"/>
+            <Button TextColor="Blue" FontAttributes="Bold" FontSize="Large" BackgroundColor="Green" Grid.Row="1" Grid.Column="0" x:Name="BtnStartTap" HorizontalOptions="FillAndExpand" Clicked="startTap" Text="Start"/>
+            <Button TextColor="Yellow" FontAttributes="Bold" FontSize="Large" BackgroundColor="Green" Grid.Row="1" Grid.Column="0" x:Name="BtnResumeTap" HorizontalOptions="FillAndExpand" IsVisible="false"  Clicked="ResumeTap" Text="Resume"/>
+            <Button TextColor="Red" FontAttributes="Bold" FontSize="Large" BackgroundColor="Yellow" Grid.Row="1" Grid.Column="0" x:Name="BtnPauseTap" HorizontalOptions="FillAndExpand" IsVisible="false"  Clicked="pauseTap" Text="Pause"/>
+            <Button FontAttributes="Bold" FontSize="Large" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" WidthRequest="50" Clicked="TapTime" Text="Tap"/>
+            <Button FontAttributes="Bold" FontSize="Large" BackgroundColor="Gray" TextColor="LightBlue" Grid.Row="1" Grid.Column="2" HorizontalOptions="FillAndExpand" WidthRequest="50" Clicked="ResetTime" Text="Reset"/>
             <ScrollView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="gray" WidthRequest="200" HeightRequest="200" VerticalOptions="End">
                 <Label  HorizontalTextAlignment="Center" TextColor="White" Text="" x:Name="kqTapTime"/>
             </ScrollView>
         </Grid>
     </ContentPage>
-    <ContentPage IconImageSource="cal.png">
+    <ContentPage BackgroundColor="LightBlue" Title="Caculator" Icon="cal.png">
         <ContentPage.Resources>
             <Style x:Key="infostyle" TargetType="Button">
                 <Setter Property="WidthRequest" Value="60"/>
@@ -71,7 +73,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="resultText" Text="0" FontSize="48" FontAttributes="Bold" BackgroundColor="Gray" TextColor="White"
+            <Label x:Name="resultText" Text="0" FontSize="48" FontAttributes="Bold" BackgroundColor="White" TextColor="Black"
                    HorizontalTextAlignment="End" VerticalTextAlignment="Center" LineBreakMode="NoWrap" Grid.ColumnSpan="4"/>
             <Button Text="AC" Clicked="Clear" Grid.Row="1" Grid.Column="0" BackgroundColor="Blue" Style="{StaticResource infostyle}"/>
             <Button Text="√" Clicked="CanBacHai" Grid.Row="1" Grid.Column="1" BackgroundColor="Blue" Style="{StaticResource infostyle}"/>
