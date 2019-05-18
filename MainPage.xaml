@@ -37,11 +37,11 @@
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" x:Name="TimerTap" Text="00:00:00.000000" FontSize="Large" FontAttributes="Bold" BackgroundColor="Gray" TextColor="White"
                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center" LineBreakMode="NoWrap"/>
-            <Button TextColor="Blue" FontAttributes="Bold" FontSize="Large" BackgroundColor="Green" Grid.Row="1" Grid.Column="0" x:Name="BtnStartTap" HorizontalOptions="FillAndExpand" Clicked="startTap" Text="Start"/>
-            <Button TextColor="Yellow" FontAttributes="Bold" FontSize="Large" BackgroundColor="Green" Grid.Row="1" Grid.Column="0" x:Name="BtnResumeTap" HorizontalOptions="FillAndExpand" IsVisible="false"  Clicked="ResumeTap" Text="Resume"/>
-            <Button TextColor="Red" FontAttributes="Bold" FontSize="Large" BackgroundColor="Yellow" Grid.Row="1" Grid.Column="0" x:Name="BtnPauseTap" HorizontalOptions="FillAndExpand" IsVisible="false"  Clicked="pauseTap" Text="Pause"/>
-            <Button FontAttributes="Bold" FontSize="Large" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" WidthRequest="50" Clicked="TapTime" Text="Tap"/>
-            <Button FontAttributes="Bold" FontSize="Large" BackgroundColor="Gray" TextColor="LightBlue" Grid.Row="1" Grid.Column="2" HorizontalOptions="FillAndExpand" WidthRequest="50" Clicked="ResetTime" Text="Reset"/>
+            <Button TextColor="Orange" FontAttributes="Bold" FontSize="Default" BackgroundColor="Green" Grid.Row="1" Grid.Column="0" x:Name="BtnStartTap" HorizontalOptions="FillAndExpand" Clicked="startTap" Text="Start"/>
+            <Button TextColor="Yellow" FontSize="Small" BackgroundColor="Green" Grid.Row="1" Grid.Column="0" x:Name="BtnResumeTap" HorizontalOptions="FillAndExpand" IsVisible="false"  Clicked="ResumeTap" Text="Resume"/>
+            <Button TextColor="Red" FontAttributes="Bold" FontSize="Default" BackgroundColor="Yellow" Grid.Row="1" Grid.Column="0" x:Name="BtnPauseTap" HorizontalOptions="FillAndExpand" IsVisible="false"  Clicked="pauseTap" Text="Pause"/>
+            <Button FontAttributes="Bold" FontSize="Medium" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" WidthRequest="50" Clicked="TapTime" Text="Lap"/>
+            <Button FontAttributes="Bold" FontSize="Medium" BackgroundColor="Gray" TextColor="White" Grid.Row="1" Grid.Column="2" HorizontalOptions="FillAndExpand" WidthRequest="50" Clicked="ResetTime" Text="Reset"/>
             <ScrollView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="gray" WidthRequest="200" HeightRequest="200" VerticalOptions="End">
                 <Label  HorizontalTextAlignment="Center" TextColor="White" Text="" x:Name="kqTapTime"/>
             </ScrollView>
@@ -58,7 +58,7 @@
                 <Setter Property="TextColor" Value="White"/>
             </Style>
         </ContentPage.Resources>
-        <Grid Padding="5,0" RowSpacing="5" ColumnSpacing="5">
+        <Grid Padding="5" RowSpacing="5" ColumnSpacing="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="*"/>
@@ -73,7 +73,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="resultText" Text="0" FontSize="48" FontAttributes="Bold" BackgroundColor="White" TextColor="Black"
+            <Label x:Name="resultText" Text="0" FontSize="48" FontAttributes="Bold" BackgroundColor="WhiteSmoke" TextColor="Black"
                    HorizontalTextAlignment="End" VerticalTextAlignment="Center" LineBreakMode="NoWrap" Grid.ColumnSpan="4"/>
             <Button Text="AC" Clicked="Clear" Grid.Row="1" Grid.Column="0" BackgroundColor="Blue" Style="{StaticResource infostyle}"/>
             <Button Text="√" Clicked="CanBacHai" Grid.Row="1" Grid.Column="1" BackgroundColor="Blue" Style="{StaticResource infostyle}"/>
